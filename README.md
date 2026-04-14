@@ -29,13 +29,14 @@
 2. **Настройте переменные окружения:**
     Создайте файл .env в корневой папке и добавьте туда ваш токен
 
+   ```bash
     bot_token=vash_token
     db_url=postgresql+asyncpg://user:password@db:5432/botdb
-    POSTGRES_USER=user
-    POSTGRES_PASSWORD=password
-    POSTGRES_DB=botdb
+    postageres_user=user
+    postageres_password=password
+    postageres_db=botdb
 
-3. **Запуск:**
+4. **Запуск:**
+   Бот станет доступен сразу после того, как база данных пройдет проверку healthcheck
+   ```bash
     docker-compose up --build
-
-    Бот станет доступен сразу после того, как база данных пройдет проверку healthcheck
